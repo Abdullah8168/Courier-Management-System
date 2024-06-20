@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="474.0" prefWidth="612.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.controller.FeedbackController">
+   <AnchorPane prefHeight="437.0" prefWidth="524.0">
+      <children>
+         <ImageView fitHeight="476.0" fitWidth="561.0" layoutX="115.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@feedback.png" />
+            </image>
+         </ImageView>
+          <Label layoutX="186.0" layoutY="208.0" prefHeight="36.0" prefWidth="178.0" text="Give Feedback">
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="23.0" />
+            </font>
+         </Label>
+          <Button fx:id="back" layoutX="488.0" layoutY="14.0" onAction="#Goback" text="BACK">
+          <style>
+              -fx-background-color: transparent;
+              -fx-border-color: #bfbfbf; /* Light grey border */
+              -fx-border-width: 1; /* Border width of 1px */
+              -fx-border-radius: 5; /* Rounded border */
+              -fx-padding: 4 8 4 8; /* Padding inside the ComboBox */
+          </style>
+          </Button>
+
+          <TextArea fx:id="commentsTextArea" layoutX="218.0" layoutY="253.0" opacity="0.47" prefHeight="103.0" prefWidth="270.0" promptText="Enter your feedback here..." />
+          <ComboBox fx:id="ratingComboBox" layoutX="344.0" layoutY="356.0" prefHeight="19.0" prefWidth="136.0" promptText="Rating">
+              <style>
+                  -fx-background-color: transparent;
+                  -fx-border-color: #bfbfbf; /* Light grey border */
+                  -fx-border-width: 1; /* Border width of 1px */
+                  -fx-border-radius: 5; /* Rounded border */
+                  -fx-padding: 4 8 4 8; /* Padding inside the ComboBox */
+              </style>
+          </ComboBox>
+          <Label fx:id="averageRatingLabel" layoutX="115.0" layoutY="418.0" prefHeight="22.0" prefWidth="117.0" text="Average Rating:">
+            <font>
+               <Font name="Bodoni MT Black" size="11.0" />
+            </font></Label>
+         <Text layoutX="304.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Submit Feedback" wrappingWidth="98.541015625" />
+          <Button layoutX="295.0" layoutY="414.0" onAction="#handleSubmitFeedback" opacity="0.0" text="Submit Feedback" />
+      </children>
+   </AnchorPane>
+
+</VBox>
